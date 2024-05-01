@@ -1,7 +1,7 @@
 body {  
     background-color: #725036;
     font-family: 'Courier New', Courier, monospace;  
-    color: #e8e5e3;
+    color: #000000;
 }
 .nav_bar {
     font-size: 30px;
@@ -43,6 +43,10 @@ body {
     background-size: 100%;
     width: 100px;
     height: 100px;
+}
+
+.center_auto {
+    margin: 0 auto;
 }
 
 /* .button_js {
