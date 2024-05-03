@@ -1,7 +1,7 @@
 body {  
     background-color: #725036;
     font-family: 'Courier New', Courier, monospace;  
-    color: #000000;
+    color: #e8e5e3;
 }
 .nav_bar {
     font-size: 30px;
@@ -10,7 +10,16 @@ body {
 .container {
     margin-top: 30px;
 }
-.row {
+
+.container2 {
+    margin-top: 30px;
+    margin-right: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+} 
+
+/* .row {
 }
 .col-8 {
 }
@@ -19,14 +28,37 @@ body {
 .col-3.nav_logo {
 }
 .col-9 {
+} */
+
+.col-12 {
+    width: 100%; 
+    margin-bottom: 20px; 
 }
+
+.col-12.gap{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    /* align-items: left; */
+}
+
+.col-12.index{
+    margin-right: 40%;
+}
+
+.row.form_reg{
+    display: block;
+}
+
 .nav_text {
     display: flex;
     align-items: center;
     justify-content: right;
 }
-.img_size {
-}
+
+/* .img_size {
+} */
+
 .title_photo {
     text-align: center;
 }
@@ -46,7 +78,7 @@ body {
 }
 
 .center_auto {
-    margin: 0 auto;
+    margin-left: 15%;
 }
 
 /* .button_js {
@@ -58,25 +90,64 @@ body {
     height: 70px;
 } */
 
-.button_js {
+
+/* .button_js {
     .myButton{
         position: fixed;
-    }
-    #myButton {
-        background-color: #780d0d;
-        color:#e8e5e3;
-        padding: 10px 15px;
-        margin-top: 5px;
-        border-radius: 5px;
-        cursor: pointer;
-        justify-content: center;
-        margin-right: 50%;
-        margin-left: 50%;
-        
-    }
+    } */
+
+/* #myButton {
+    background-color: #780d0d;
+    color:#e8e5e3;
+    padding: 10px 15px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    margin-right: 50%;
+    margin-left: 50%;
+} */
+
+.myButton{
+    background-color: #780d0d;
+    color:#e8e5e3;
+    padding: 10px 15px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    margin-right: o auto;
+
+}
+
+.btn_red.btn_reg {
+    background-color: #780d0d;
+    color:#e8e5e3;
+    padding: 10px 15px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    margin-right: 50%;
+    margin-left: 50%;
+}
+
+.btn_red {
+    /* border: 2px black; */
+    border-radius: 10px;
+    width: 200px;
+    background-color: #780d0d;
+    color: #e8e5e3;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-weight: bold;
+    margin-top: 20px;
+    display: block;
+    width: 200px; 
+    margin: 0 auto;
 }
 
 #demo img {
     margin-right: 30%;
     margin-left: 30%;
 }
+

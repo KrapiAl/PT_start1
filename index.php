@@ -12,21 +12,32 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container2">
         <div class="row">
-            <div class="center_auto">
+            <div>
                 <div class="col-12 index">
-                    <h1>Авторизируйтесь</h1>
-                    <?php
-                    if (!isset($_COOKIE['User'])) {
-                    ?>
-                        <a href="/registration.php">Зарегистрируйтесь</a> или <a href="/login.php"> войдите</a>, чтобы просматривать контент!
+                    <h1 class="col-12 index">Посты</h1>
+                <?php
+                if (!isset($_COOKIE['User'])) {
+                ?>
+                    <a href="/registration.php">Зарегистрируйтесь</a> или <a href="/login.php"> войдите</a>, чтобы просматривать контент!
 
-                    <?php
+                <?php
+                } else {
+                    // подключение к БД
+                    $link = mysqli_connect('127.0.0.1', 'root', 'kali', 'first');
+
+                    $sql = "SELECT * FROM posts";
+                    $res = mysqli_query($link, $sql);
+                    if (mysqli_num_rows($res) >  0) {
+                        while ($post = mysqli_fetch_array($res)) {
+                            echo "<a href='/posts.php?id=" . $post["id"] . "'>" . $post['title'] . "</a><br>";
+                        }
                     } else {
-                        // подключение к БД
+                        echo "Записей пока нет";
                     }
-                    ?>
+                }
+                ?>
                 </div>
             </div>
         </div>
